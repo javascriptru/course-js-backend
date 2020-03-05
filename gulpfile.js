@@ -1,5 +1,4 @@
-const config = require('./config');
+const app = require('./app');
 const { addTasks } = require('@javascriptru/project-server');
 
-addTasks({ publicRoot: config.publicRoot});
-
+addTasks(app);

@@ -12,6 +12,7 @@
   "author": "Ilya Kantor",
   "dependencies": {
     "@javascriptru/json-db": "github:javascriptru/json-db",
+    "@javascriptru/project-server": "github:javascriptru/project-server",
     "@javascriptru/rest": "github:javascriptru/rest",
     "@koa/cors": "^3.0.0",
     "@koa/multer": "^2.0.1",

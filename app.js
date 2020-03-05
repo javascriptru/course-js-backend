@@ -1,9 +1,9 @@
-const Koa = require('@javascriptru/project-server');
+const { Application } = require('@javascriptru/project-server');
 const config = require('./config');
 const send = require('koa-send');
 const Router = require('@koa/router');
 
-const app = new Koa({
+const app = new Application({
   publicRoot: config.publicRoot,
   cors: true
 });
