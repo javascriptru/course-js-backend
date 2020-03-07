@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-basic-tasks-ru",
+  "name": "course-js-server",
   "version": "1.0.0",
-  "description": "Node.JS Course Materials",
+  "description": "",
   "scripts": {
     "start": "node index.js",
     "test": "cross-env NODE_ENV=test mocha --no-warnings --reporter=reporter.js *module/*task/**/*.test.js",
