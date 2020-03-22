@@ -1,10 +1,13 @@
 let Db = require('@javascriptru/json-db');
 let config = require('../config');
-let path = require('path');
+let { resolve } = require('path');
+let fs = require('fs');
+
+fs.copyFileSync(resolve(config.dataRoot, 'db.json'), resolve(config.dataRoot, 'db.work.json'));
 
 let db = new Db({
-  dataPath: path.resolve(config.dataRoot, 'db.json'),
-  schemasPath: path.resolve(config.dataRoot, 'schemas.js')
+  dataPath: resolve(config.dataRoot, 'db.work.json'),
+  schemasPath: resolve(config.dataRoot, 'schemas.js')
 });
 
 db.load();
