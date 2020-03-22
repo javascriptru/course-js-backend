@@ -4,7 +4,7 @@ const getOrders = require('./lib/getOrders');
 module.exports = async (ctx) => {
 
   // await new Promise(resolve => setTimeout(resolve, 3000));
-console.log(ctx.db)
+
   let orders = getOrders(ctx.db, ctx.query);
 
   let stats = Object.create(null);
