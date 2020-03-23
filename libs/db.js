@@ -4,7 +4,7 @@ let path = require('path');
 
 class BackendDb extends Db {
   load() {
-    super();
+    super.load();
     this.data.orders = this.data.orders.filter(order => order.createdAt < Date.now());
   }
 }
