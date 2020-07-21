@@ -24,6 +24,13 @@ router.get('/dashboard/sales', require('./controllers/api/dashboard/sales'));
 router.get('/dashboard/customers', require('./controllers/api/dashboard/customers'));
 router.get('/dashboard/bestsellers', require('./controllers/api/dashboard/bestsellers'));
 router.get('/reload', require('./controllers/api/reload'));
+
+// set default for new products before standard REST
+router.put('/rest/products', async (ctx, next) => {
+  ctx.request.body.rating = null; 
+  next();
+});
+
 router.use('/rest', require('@javascriptru/rest')(app.context.db));
 app.use(router.routes());
 
